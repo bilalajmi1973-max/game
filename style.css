@@ -1,14 +1,15 @@
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    background: pink;
+    background: linear-gradient(160deg,#ffb2d9,#ff74b9,#ff5fa2);
     overflow: hidden;
     text-align: center;
     color: white;
+    height: 100vh;
 }
 
 .container {
-    margin-top: 150px;
+    margin-top: 14vh;
     animation: fadeIn 0.7s ease;
 }
 
@@ -23,23 +24,24 @@ button {
     border-radius: 30px;
     border: none;
     font-size: 18px;
-    margin: 10px;
+    margin: 12px;
     cursor: pointer;
     transition: 0.2s;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
 button:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
 }
 
 .subtitle {
-    margin-top: -10px;
+    margin-top: 10px;
     font-size: 18px;
-    opacity: 0.85;
+    opacity: 0.95;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -51,7 +53,7 @@ button:hover {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: -1; /* THIS MAKES BUTTONS CLICKABLE */
+    z-index: -1; /* hearts stay behind content so buttons are clickable */
 }
 
 .heart {
@@ -59,10 +61,10 @@ button:hover {
     color: white;
     font-size: 20px;
     animation: floatUp linear infinite;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 @keyframes floatUp {
-    from { transform: translateY(100vh) scale(1); opacity: 0.8; }
+    from { transform: translateY(100vh) scale(1); opacity: 0.9; }
     to { transform: translateY(-10vh) scale(1.4); opacity: 0; }
 }
