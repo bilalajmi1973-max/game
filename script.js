@@ -1,20 +1,21 @@
-let current = 0;
-
-function nextStep(n){
-    document.getElementById("screen"+current).classList.remove("active");
-    document.getElementById("screen"+n).classList.add("active");
-    current = n;
+function nextStep(step) {
+    document.querySelectorAll(".container").forEach(c => c.classList.add("hidden"));
+    document.getElementById("step" + step).classList.remove("hidden");
 }
 
-const container=document.getElementById("floating-hearts");
+const heartsContainer = document.getElementById("hearts");
 
-function floatHeart(){
-  const h=document.createElement("div");
-  h.textContent="💖";
-  h.style.left=Math.random()*100+"vw";
-  h.style.top="100vh";
-  h.style.fontSize=(Math.random()*20+20)+"px";
-  container.appendChild(h);
-  setTimeout(()=>h.remove(),5000);
+function spawnHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💗";
+    
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (2 + Math.random() * 3) + "s";
+
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 4000);
 }
-setInterval(floatHeart,500);
+
+setInterval(spawnHeart, 300);
