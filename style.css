@@ -1,0 +1,75 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:linear-gradient(160deg,#ffb2d9,#ff74b9,#ff5fa2);
+  font-family:Montserrat,Arial;
+  color:white;
+  overflow:hidden;
+  text-align:center;
+  padding:25px;
+}
+
+/* Screen transitions */
+.screen{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%) scale(0.85);
+  opacity:0;
+  transition:0.6s ease;
+}
+.screen.active{
+  opacity:1;
+  transform:translate(-50%,-50%) scale(1);
+}
+
+/* Animations */
+.fade{animation:fadeIn 1s forwards}
+.fade-delay{animation:fadeIn 1.4s forwards}
+.pop:hover{transform:scale(1.1)}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.slide{
+  animation:slideIn 0.8s forwards;
+}
+@keyframes slideIn{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Buttons */
+.btn{
+  margin-top:20px;
+  background:white;
+  color:#ff4fa3;
+  padding:12px 22px;
+  border:none;
+  border-radius:25px;
+  font-size:18px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* Final heart */
+.big-heart{
+  font-size:90px;
+  margin-top:20px;
+}
+@keyframes beat{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.25)}
+}
+.beat{animation:beat 1.4s infinite;}
+
+/* Floating hearts */
+#floating-hearts div{
+  position:absolute;
+  animation:rise 5s linear forwards;
+}
+@keyframes rise{
+  0%{transform:translateY(0);opacity:1}
+  100%{transform:translateY(-110vh);opacity:0}
+}
