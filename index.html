@@ -1,52 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>For My Habibti 💖</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+    <div id="hearts"></div>
 
-<div class="screen active" id="screen0">
-    <h1 class="title fade">Hiiiiiiiiii Habibtiiiiiiiiiiiii 💗💗💗</h1>
-    <p class="subtitle fade-delay">Ready for something cuuuuuute? 💗</p>
+    <div class="container" id="step1">
+        <h1>Hiiiiiiiiii Habibtiiiiiiiiiiiii 💗💗💗</h1>
+        <p class="subtitle">Ready for something cuuuuuute? 💗</p>
 
-    <button class="btn pop" onclick="nextStep(1)">Yesssssss 💗</button>
-    <button class="btn pop" onclick="nextStep(1)">Of courseeeeeee 💗</button>
-</div>
+        <button onclick="nextStep(2)">Yessssssss 💗</button>
+        <button onclick="nextStep(2)">Of courseeeeeeee 💗</button>
+    </div>
 
-<div class="screen" id="screen1">
-    <h2 class="q slide">How much do you love me? 💗</h2>
-    <button class="btn pop" onclick="nextStep(2)">A lottttttttt 💗</button>
-    <button class="btn pop" onclick="nextStep(2)">More than a lottttttttt 💗</button>
-    <button class="btn pop" onclick="nextStep(2)">Infinityyyyyyyyyy 💗</button>
-</div>
+    <div class="container hidden" id="step2">
+        <h1>How much do you love me? 💗</h1>
+        <button onclick="nextStep(3)">Sooooooooo muchhhhhhhhh 💗</button>
+        <button onclick="nextStep(3)">More than everythingggggg 💗</button>
+    </div>
 
-<div class="screen" id="screen2">
-    <h2 class="q slide">Who is your favorite person? 💗</h2>
-    <button class="btn pop" onclick="nextStep(3)">Youuuuuuuuuuu 💗</button>
-    <button class="btn pop" onclick="nextStep(3)">Myyy handsomeee sexyyyy mannnnnnnn 💗</button>
-</div>
+    <div class="container hidden" id="step3">
+        <h1>Who is your favorite person? 💗</h1>
+        <button onclick="nextStep(4)">Youuuuuuuuuuuuu 💗</button>
+        <button onclick="nextStep(4)">Myyyy handsomeee sexyyyy mannnnn 💗</button>
+    </div>
 
-<div class="screen" id="screen3">
-    <h2 class="q slide">Do you want your surprise now? 💓</h2>
-    <button class="btn pop" onclick="nextStep(4)">Yessssssssss 💗</button>
-    <button class="btn pop" onclick="nextStep(4)">Give itttttttttt 💗</button>
-</div>
+    <div class="container hidden" id="step4">
+        <h1>I loooooove youuuuuuuuu soooo sooooo muchhhhhhhh 💗💗💗</h1>
+        <p class="subtitle">You mean the whoooole world to meeeeee 💗</p>
+    </div>
 
-<div class="screen" id="screen4">
-    <h2 class="final-msg fade">
-    I loveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee youuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu soooo soooooo soooooooooooooooooo muchhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh myyyyyyy habibtiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii 💗💗💗<br><br>
-    You meannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn everythiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiinggggggggggggggggggggggggggggggggggg to meeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee 💞
-    </h2>
-
-    <div class="big-heart beat">❤</div>
-</div>
-
-<div id="floating-hearts"></div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
